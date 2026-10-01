@@ -1,0 +1,5 @@
+db.host=ip_address
+db.port=port
+db.name=db_name
+db.user=user
+db.password=password

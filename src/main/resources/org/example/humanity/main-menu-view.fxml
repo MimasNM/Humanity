@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox alignment="CENTER" spacing="16.0" prefHeight="280.0" prefWidth="420.0"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.humanity.controllers.MainMenuController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
 
-</AnchorPane>
+    <Label text="Главное меню"/>
+    <Label fx:id="userLabel" wrapText="true"/>
+
+    <VBox spacing="10.0" maxWidth="Infinity">
+        <Button fx:id="productsButton" text="Товары" onAction="#onProducts" maxWidth="Infinity"/>
+        <!-- Кнопка "Пользователи" показывается только при role = admin -->
+        <Button fx:id="usersButton" text="Пользователи" onAction="#onUsers" maxWidth="Infinity"/>
+        <Button text="Выход" onAction="#onLogout" maxWidth="Infinity"/>
+    </VBox>
+</VBox>

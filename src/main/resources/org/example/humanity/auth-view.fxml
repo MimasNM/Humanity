@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.humanity.HelloController">
+<VBox alignment="CENTER" prefHeight="240.0" prefWidth="380.0" spacing="12.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="org.example.humanity.controllers.AuthController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label text="Вход в аккаунт" />
+
+    <TextField fx:id="usernameField" promptText="Логин" />
+    <PasswordField fx:id="passwordField" onAction="#onLogin" promptText="Пароль" />
+    <Label fx:id="errorLabel" wrapText="true" />
+
+    <HBox alignment="CENTER">
+        <Button defaultButton="true" onAction="#onLogin" text="Войти" />
+    </HBox>
+   <Button mnemonicParsing="false" onAction="#onExit" text="Выйти" />
 </VBox>

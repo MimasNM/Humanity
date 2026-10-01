@@ -36,3 +36,5 @@ replay_pid*
 
 Thumbs.db
 .DS_Store
+
+src/main/resources/db.properties
